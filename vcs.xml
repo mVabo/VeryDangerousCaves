@@ -6,6 +6,10 @@
           <option name="url" value="http://retting.ii.uib.no" />
           <option name="userName" value="mathias.vabo@student.uib.no" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://github.com" />
+          <option name="userName" value="mVabo" />
+        </UrlAndUserName>
       </list>
     </option>
   </component>
