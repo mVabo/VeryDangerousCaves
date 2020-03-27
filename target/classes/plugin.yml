@@ -1,0 +1,13 @@
+name: VeryDangerousCaves
+version: 1.0-SNAPSHOT
+main: me.mvabo.verydangerouscaves.VeryDangerousCaves
+api-version: 1.13
+prefix: VDC
+load: STARTUP
+authors: [mVabo, OkDexter12]
+description: Makes ur cave hardcore
+
+commands:
+  reload:
+    description: Reloads config
+    usage: /reload
