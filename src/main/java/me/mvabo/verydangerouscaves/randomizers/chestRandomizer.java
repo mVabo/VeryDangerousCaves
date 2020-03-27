@@ -15,6 +15,7 @@ public class chestRandomizer {
 
     static Random randint = new Random();
 
+    //Causes weird error, try is to stop it.
     public static void fillChest(Block b) {
         Chest chest = (Chest) b.getState();
         Inventory inv = chest.getInventory();
