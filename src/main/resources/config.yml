@@ -1,0 +1,89 @@
+#+++++++++++++++
+#+  C A V E S  +
+#+++++++++++++++
+
+cm-enabled: true
+
+#Select what you want to be activated
+enable_cave_ins: true
+enable_hungering_darkness: true
+enable_ambient_cave_sounds: true
+enable_cave_temperature: true
+enable_cave_aging: true
+enable_cave_monsters: true
+enable_cave_structures: true
+enable_monster_fixing: true
+enable_broken_monster_deletion: true
+enable_cave_skulls: true
+enable_easter_eggs: true
+
+#Select percentage change of things happening - Goes from 0-100%
+cave_aging_chance: 50
+cave_aging_chance_chance: 75
+cave_ambience_chance: 25
+cave_walk_temp_chance: 0.005 #goes from 0-1
+cave_break_block_temp_chance: 0.001 #goes from 0-1
+cave-in_chance: 0.0001 #goes from 0-1
+darkness_spawn_chance: 15
+cave_structure_chance: 100
+crystal_cave_chance: 2
+
+#Select what dept monsters should spawn at
+monster_highest_y: 60
+monster_lowest_y: 0
+
+#Decide how much damage the hungering darkness should do
+hungering_darkness_damage: 200
+
+#Select at what rate you want structures to spawn - Goes from 0-100%
+traps_rate: 100
+buildings_rate: 100
+boulder_rate: 100
+pillar_rate: 100
+
+#Select what mobs to have enabled
+spawn_crying_bat: true
+spawn_magma_monster: true
+spawn_lava_creeper: true
+spawn_tnt_creeper: true
+spawn_watcher: true
+spawn_smoke_demon: true
+spawn_alpha_spider: true
+spawn_dead_miner: true
+spawn_hexed_armor: true
+
+#Mob spawn chance - Goes from 0-100%
+crying_bat_chance: 75
+magma_monster_chance: 75
+lava_creeper_chance: 75
+tnt_creeper_chance: 75
+watcher_chance: 75
+smoke_demon_chance: 75
+alpha_spider_chance: 75
+dead_miner_chance: 75
+hexed_armor_chance: 75
+
+#Decide the custom mob names
+crying_bat: 'Crying Bat'
+magma_monster: 'Magma Monster'
+lava_creeper: 'Lava Creeper'
+tnt_creeper: 'TnT Creeper'
+watcher: 'Watcher'
+smoke_demon: 'Smoke Demon'
+alpha_spider: 'Alpha spider'
+dead_miner: 'Dead Miner'
+hexed_armor: 'Hexed Armor'
+the_darkness: 'The Darkness'
+
+#Name of worlds this module will be active in
+enabled_cave_worlds:
+  - 'world'
+
+#Set your temperature messages
+temperature_messages:
+  - '&4Wow, it sure is getting hot down here, i should bring water next time...'
+  - '&4All this heat is making me slower...'
+
+#Enter items to add to treasure chests
+custom_items:
+  - GOLDEN_APPLE
