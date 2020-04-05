@@ -291,7 +291,7 @@ public class caveDoMobSpawns implements Listener {
                 e.setCanPickupItems(false);
                 //System.out.println("hexed armor spawned");
             } else if (name.equals(plugin.getConfig().getString("dead_diamond_miner"))
-                    && (randint.nextDouble() < plugin.getConfig().getDouble("dead_diamond_miner_chance"))) {
+                    && (randint.nextDouble() < plugin.getConfig().getDouble("dead_diamond_miner_chance")) && e.getLocation().getY() <= 20) {
                 if (e.getType() != EntityType.ZOMBIE) {
                     Entity e2 = e.getWorld().spawnEntity(e.getLocation(), EntityType.ZOMBIE);
                     e.remove();

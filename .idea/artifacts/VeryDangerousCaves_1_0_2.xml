@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VeryDangerousCaves 1.0.2">
+    <output-path>$USER_HOME$/Desktop/DangerousTest/Plugins</output-path>
+    <root id="archive" name="VeryDangerousCaves 1.0.2.jar">
+      <element id="module-output" name="VeryDangerousCaves" />
+    </root>
+  </artifact>
+</component>
