@@ -103,11 +103,11 @@ public class chestRandomizer {
                 items.add(new ItemStack(Material.SUGAR_CANE, randint.nextInt(3)+1));
             }
             else if(choice == 23) {
-                //try {
+                try {
                 if(cave.itemcustom.size()>0) {
                     items.add(new ItemStack(Material.getMaterial(cave.itemcustom.get(randint.nextInt(cave.itemcustom.size()))), randint.nextInt(3)+1));
                 }
-                //}catch(Exception e) { }
+                }catch(Exception e) { }
             }
         }
         return items;

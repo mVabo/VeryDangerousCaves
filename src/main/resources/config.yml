@@ -75,6 +75,12 @@ dead_miner: 'Dead Miner'
 hexed_armor: 'Hexed Armor'
 the_darkness: 'The Darkness'
 
+#Boss settings
+spawn_dead_diamond_miner: true
+dead_diamond_miner_chance: 0.003
+dead_diamond_miner_drop_chance: 0.03
+dead_diamond_miner: 'Dead Diamond Miner'
+
 #Name of worlds this module will be active in
 enabled_cave_worlds:
   - 'world'
