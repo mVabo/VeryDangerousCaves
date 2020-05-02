@@ -1,0 +1,12 @@
+<application>
+  <component name="libraryTable">
+    <library name="PaperLib">
+      <CLASSES />
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$USER_HOME$/PaperLib" />
+        <root url="file://$USER_HOME$/PaperLib/src/main/java" />
+      </SOURCES>
+    </library>
+  </component>
+</application>
