@@ -32,19 +32,27 @@ public class SpawnHandler implements Listener {
 
         Plugin plugin = VeryDangerousCaves.getPlugin(VeryDangerousCaves.class);
 
+        Random rand = new Random();
+
+        int choice = rand.nextInt(10);
+
         if(event.getSpawnReason().equals(CreatureSpawnEvent.SpawnReason.NATURAL)) {
             if (!e.hasMetadata("VDC") && isStony(e.getLocation().subtract(0, 1, 0).getBlock().getType()) && e.getLocation().getBlockY() < 90) {
                 String world;
                 for (int i = 0; i < cave.worlds.size(); i++) {
                     world = cave.worlds.get(i);
                     if (e.getWorld().getName().equalsIgnoreCase(world)) {
-                        doSpawn(e);
+                        if(choice>=6) {
+                            doSpawn(e);
+                        }
                     }
                 }
             } else if (!e.hasMetadata("VDC") && isStony(e.getLocation().subtract(0, 1, 0).getBlock().getType()) && e.getLocation().getBlockY() < 70 && e.getLocation().getBlock().getLightLevel() == 0) {
                 doDarkness(e);
             } else if(!e.hasMetadata("VDC") && isStony(e.getLocation().subtract(0, 1, 0).getBlock().getType()) && e.getLocation().getBlockY() < 12) {
-                doBoss(e);
+                if (choice == 1) {
+                    doBoss(e);
+                }
             }
         }
     }
@@ -55,39 +63,57 @@ public class SpawnHandler implements Listener {
         switch(choice) {
             case 0:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("watcher_chance")){
-                    mob = new Watcher(e);
+                    if(plugin.getConfig().getBoolean("spawn_watcher")) {
+                        mob = new Watcher(e);
+                    }
                 }
             case 1:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("alpha_spider_chance")) {
-                    mob = new AlphaSpider(e);
+                    if(plugin.getConfig().getBoolean("spawn_alpha_spider")) {
+                        mob = new AlphaSpider(e);
+                    }
                 }
             case 2:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("crying_bat_chance")) {
-                    mob = new CryingBat(e);
+                    if(plugin.getConfig().getBoolean("spawn_crying_bat")) {
+                        mob = new CryingBat(e);
+                    }
                 }
             case 3:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("dead_miner_chance")) {
-                    mob = new DeadMiner(e);
+                    if(plugin.getConfig().getBoolean("spawn_dead_miner")) {
+                        mob = new DeadMiner(e);
+                    }
                 }
             case 4:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("hexed_armor_chance")) {
-                    mob = new HexedArmor(e);
+                    if(plugin.getConfig().getBoolean("spawn_hexed_armor")) {
+                        mob = new HexedArmor(e);
+                    }
                 }
             case 5:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("lava_creeper_chance")){
-                    mob = new LavaCreeper(e);
+                    if(plugin.getConfig().getBoolean("spawn_lava_creeper")) {
+                        mob = new LavaCreeper(e);
+                    }
                 }
             case 6:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("magma_monster_chance")) {
-                    mob = new MagmaMonster(e);
+                    if(plugin.getConfig().getBoolean("spawn_magma_monster")) {
+                        mob = new MagmaMonster(e);
+                    }
                 }
             case 7:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("smoke_demon_chance")) {
-                    mob = new SmokeDemon(e);
+                    if(plugin.getConfig().getBoolean("spawn_smoke_demon")) {
+                        mob = new SmokeDemon(e);
+                    }
                 }
             case 8:
                 if(rand.nextInt(100)<plugin.getConfig().getInt("tnt_creeper_chance")) {
-                    mob = new TnTCreeper(e);
+                    if(plugin.getConfig().getBoolean("spawn_tnt_creeper")) {
+                        mob = new TnTCreeper(e);
+                    }
                 }
 
         }
@@ -97,7 +123,9 @@ public class SpawnHandler implements Listener {
         int choice = rand.nextInt(1);
         if (choice == 0) {
             if(rand.nextDouble() < plugin.getConfig().getInt("dead_diamond_miner_chance")) {
-                Boss b = new DeadDiamondMiner(e);
+                if(plugin.getConfig().getBoolean("spawn_dead_diamond_miner")) {
+                    Boss b = new DeadDiamondMiner(e);
+                }
             }
         } else if (choice == 1) {
             if (rand.nextDouble() < 0.0001) {
