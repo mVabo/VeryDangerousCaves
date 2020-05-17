@@ -6,9 +6,7 @@ import me.mvabo.verydangerouscaves.mobs.caveBosses.DeadDiamondMiner;
 import me.mvabo.verydangerouscaves.mobs.caveBosses.HeroBraine;
 import me.mvabo.verydangerouscaves.mobs.caveMobs.*;
 import org.bukkit.Material;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -42,8 +40,10 @@ public class SpawnHandler implements Listener {
                 for (int i = 0; i < cave.worlds.size(); i++) {
                     world = cave.worlds.get(i);
                     if (e.getWorld().getName().equalsIgnoreCase(world)) {
-                        if(choice>=6) {
-                            doSpawn(e);
+                        if (e instanceof Creeper || e instanceof Spider || e instanceof Skeleton || e instanceof Zombie && !(e instanceof Husk)) {
+                            if (choice >= 6) {
+                                doSpawn(e);
+                            }
                         }
                     }
                 }
