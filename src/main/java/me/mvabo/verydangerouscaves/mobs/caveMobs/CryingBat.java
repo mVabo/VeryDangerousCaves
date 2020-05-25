@@ -5,6 +5,7 @@ import me.mvabo.verydangerouscaves.cave;
 import me.mvabo.verydangerouscaves.mobs.Mob;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.Plugin;
 
@@ -23,5 +24,6 @@ public class CryingBat extends Mob {
         e.setMetadata(plugin.getConfig().getString("crying_Bat"), new FixedMetadataValue(plugin, 0));
         e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
         cave.effectEnts.add(e);
+        ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

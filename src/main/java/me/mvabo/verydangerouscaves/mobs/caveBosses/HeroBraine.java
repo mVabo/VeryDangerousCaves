@@ -36,5 +36,6 @@ public class HeroBraine extends Boss {
         e.setMetadata("Herobrine", new FixedMetadataValue(plugin, 0));
         e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setCanPickupItems(false);
+        ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

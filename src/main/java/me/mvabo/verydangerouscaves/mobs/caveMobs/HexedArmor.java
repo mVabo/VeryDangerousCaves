@@ -29,5 +29,6 @@ public class HexedArmor extends Mob {
         e.setMetadata(plugin.getConfig().getString("hexed_armor"), new FixedMetadataValue(plugin, 0));
         e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setCanPickupItems(false);
+        ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

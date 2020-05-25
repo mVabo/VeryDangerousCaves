@@ -62,6 +62,7 @@ public class DeadDiamondMiner extends Boss {
         e.setMetadata(plugin.getConfig().getString("dead_diamond_miner"), new FixedMetadataValue(plugin, 0));
         e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setCanPickupItems(false);
+        ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 
     public void setDiamondMinerHands(Entity e) {

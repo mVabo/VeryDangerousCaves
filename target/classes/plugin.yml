@@ -1,5 +1,5 @@
 name: VeryDangerousCaves
-version: 1.0.5
+version: 1.0.6.1
 main: me.mvabo.verydangerouscaves.VeryDangerousCaves
 api-version: 1.13
 prefix: VDC
@@ -10,4 +10,5 @@ description: Makes ur cave hardcore
 commands:
   VDC:
     description: Contains reload and spawn command
+    permission: vdc.vdc
     usage: /VDC

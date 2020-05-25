@@ -39,5 +39,6 @@ public class Watcher extends Mob {
         e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
         removeHand(e);
         ((LivingEntity) e).setCanPickupItems(false);
+        ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

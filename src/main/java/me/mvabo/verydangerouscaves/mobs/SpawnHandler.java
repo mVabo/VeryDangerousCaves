@@ -42,16 +42,22 @@ public class SpawnHandler implements Listener {
                     if (e.getWorld().getName().equalsIgnoreCase(world)) {
                         if (e instanceof Creeper || e instanceof Spider || e instanceof Skeleton || e instanceof Zombie && !(e instanceof Husk)) {
                             if (choice >= 6) {
-                                doSpawn(e);
+                                if(isCave(e.getLocation().subtract(0, -1, 0).getBlock().getType())) {
+                                    doSpawn(e);
+                                }
                             }
                         }
                     }
                 }
             } else if (!e.hasMetadata("VDC") && isStony(e.getLocation().subtract(0, 1, 0).getBlock().getType()) && e.getLocation().getBlockY() < 70 && e.getLocation().getBlock().getLightLevel() == 0) {
-                doDarkness(e);
+                if(isCave(e.getLocation().subtract(0, -1, 0).getBlock().getType())) {
+                    doDarkness(e);
+                }
             } else if(!e.hasMetadata("VDC") && isStony(e.getLocation().subtract(0, 1, 0).getBlock().getType()) && e.getLocation().getBlockY() < 12) {
                 if (choice == 1) {
-                    doBoss(e);
+                    if(isCave(e.getLocation().subtract(0, -1, 0).getBlock().getType())) {
+                        doBoss(e);
+                    }
                 }
             }
         }
@@ -163,6 +169,13 @@ public class SpawnHandler implements Listener {
         if (m.name().toLowerCase().contains("dirt") || m == Material.STONE || m == Material.MOSSY_COBBLESTONE
                 || m == Material.ANDESITE || m == Material.DIORITE || m == Material.COBBLESTONE || m == Material.GRANITE
                 || m == Material.GRAVEL) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isCave(Material m) {
+        if (m.equals(Material.CAVE_AIR)) {
             return true;
         }
         return false;
