@@ -20,7 +20,7 @@ public class TnTCreeper extends Mob {
         }
         e.setCustomName(plugin.getConfig().getString("tnt_creeper"));
         e.setMetadata(plugin.getConfig().getString("tnt_creeper"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

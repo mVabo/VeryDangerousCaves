@@ -12,6 +12,7 @@ enable_cave_temperature: true
 enable_cave_aging: true
 enable_cave_monsters: true
 enable_cave_structures: true
+enable_loot_splosion: true
 enable_monster_fixing: true
 enable_broken_monster_deletion: true
 enable_cave_skulls: true
@@ -21,7 +22,7 @@ enable_easter_eggs: true
 cave_aging_chance: 50
 cave_aging_chance_chance: 75
 cave_ambience_chance: 25
-cave_walk_temp_chance: 0.005 #goes from 0-1
+cave_temp_chance: 0.005 #goes from 0-1
 cave_break_block_temp_chance: 0.001 #goes from 0-1
 cave-in_chance: 0.0001 #goes from 0-1
 darkness_spawn_chance: 15
@@ -63,7 +64,7 @@ alpha_spider_chance: 75
 dead_miner_chance: 75
 hexed_armor_chance: 75
 
-#Decide the custom mob names
+#Decide the custom mob names, **Changing 'The Darkness' name might cause errors.
 crying_bat: 'Crying Bat'
 magma_monster: 'Magma Monster'
 lava_creeper: 'Lava Creeper'
@@ -93,3 +94,14 @@ temperature_messages:
 #Enter items to add to treasure chests
 custom_items:
   - GOLDEN_APPLE
+
+lootsplosion-list:
+  - DIAMOND_PICKAXE
+  - GOLDEN_APPLE
+  - GOLD_INGOT
+  - GOLD_INGOT
+  - DIAMOND
+  - DIAMOND
+  - CARROT
+  - COOKED_BEEF
+  - COOKED_BEEF

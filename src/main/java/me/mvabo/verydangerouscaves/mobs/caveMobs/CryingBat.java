@@ -2,6 +2,7 @@ package me.mvabo.verydangerouscaves.mobs.caveMobs;
 
 import me.mvabo.verydangerouscaves.VeryDangerousCaves;
 import me.mvabo.verydangerouscaves.cave;
+import me.mvabo.verydangerouscaves.caveEffects.EffectLooper;
 import me.mvabo.verydangerouscaves.mobs.Mob;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -21,9 +22,10 @@ public class CryingBat extends Mob {
         }
 
         e.setCustomName(plugin.getConfig().getString("crying_bat"));
+        e.setMetadata("cryingbat", new FixedMetadataValue(plugin, 0));
         e.setMetadata(plugin.getConfig().getString("crying_Bat"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
-        cave.effectEnts.add(e);
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
+
         ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

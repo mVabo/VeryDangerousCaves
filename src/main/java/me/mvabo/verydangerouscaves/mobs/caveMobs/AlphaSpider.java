@@ -20,7 +20,7 @@ public class AlphaSpider extends Mob {
         }
         e.setCustomName(plugin.getConfig().getString("alpha_spider"));
         e.setMetadata(plugin.getConfig().getString("alpha_spider"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

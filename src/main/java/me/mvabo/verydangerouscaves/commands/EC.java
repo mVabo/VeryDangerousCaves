@@ -18,7 +18,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.awt.*;
 
-public class VDC implements CommandExecutor {
+public class EC implements CommandExecutor {
 
     Plugin plugin = VeryDangerousCaves.getPlugin(VeryDangerousCaves.class);
 

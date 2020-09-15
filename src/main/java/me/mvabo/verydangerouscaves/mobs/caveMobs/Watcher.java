@@ -36,7 +36,7 @@ public class Watcher extends Mob {
         ee.setHelmetDropChance(0);
         e.setCustomName(plugin.getConfig().getString("watcher"));
         e.setMetadata(plugin.getConfig().getString("watcher"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         removeHand(e);
         ((LivingEntity) e).setCanPickupItems(false);
         ((LivingEntity) e).setRemoveWhenFarAway(true);

@@ -37,7 +37,7 @@ public class DeadMiner extends Mob {
         setMinerHands(e);
         e.setCustomName(plugin.getConfig().getString("dead_miner"));
         e.setMetadata(plugin.getConfig().getString("dead_miner"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setCanPickupItems(false);
         ((LivingEntity) e).setRemoveWhenFarAway(true);
     }

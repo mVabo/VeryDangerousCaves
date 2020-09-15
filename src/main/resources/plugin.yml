@@ -1,5 +1,5 @@
-name: VeryDangerousCaves
-version: 1.0.6.1
+name: EnhancedCaves
+version: 1.0.0
 main: me.mvabo.verydangerouscaves.VeryDangerousCaves
 api-version: 1.13
 prefix: VDC
@@ -8,7 +8,7 @@ authors: [mVabo, OkDexter12]
 description: Makes ur cave hardcore
 
 commands:
-  VDC:
+  EC:
     description: Contains reload and spawn command
-    permission: vdc.vdc
-    usage: /VDC
+    permission: ec.command
+    usage: /ec

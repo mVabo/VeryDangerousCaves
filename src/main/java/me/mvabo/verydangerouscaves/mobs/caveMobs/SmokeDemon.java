@@ -27,7 +27,7 @@ public class SmokeDemon extends Mob {
         e.setSilent(true);
         e.setCustomName(plugin.getConfig().getString("smoke_demon"));
         e.setMetadata(plugin.getConfig().getString("smoke_demon"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         removeHand(e);
         ((LivingEntity) e).setCanPickupItems(false);
         ((LivingEntity) e).setRemoveWhenFarAway(true);

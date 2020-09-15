@@ -20,7 +20,7 @@ public class LavaCreeper extends Mob {
         }
         e.setCustomName(plugin.getConfig().getString("lava_creeper"));
         e.setMetadata(plugin.getConfig().getString("lava_creeper"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
 }

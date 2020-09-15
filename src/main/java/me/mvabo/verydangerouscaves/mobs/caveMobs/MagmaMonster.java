@@ -56,7 +56,7 @@ public class MagmaMonster extends Mob {
         e.setCustomName(plugin.getConfig().getString("magma_monster"));
         e.setSilent(true);
         e.setMetadata(plugin.getConfig().getString("magma_monster"), new FixedMetadataValue(plugin, 0));
-        e.setMetadata("VDC", new FixedMetadataValue(plugin, 0));
+        e.setMetadata("ec", new FixedMetadataValue(plugin, 0));
         ((LivingEntity) e).setCanPickupItems(false);
         ((LivingEntity) e).setRemoveWhenFarAway(true);
     }
