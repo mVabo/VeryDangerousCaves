@@ -6,6 +6,8 @@ prefix: VDC
 load: STARTUP
 authors: [mVabo, OkDexter12]
 description: Makes ur cave hardcore
+depend:
+  - EnhancedCore
 
 commands:
   EC:

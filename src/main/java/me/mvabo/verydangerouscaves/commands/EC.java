@@ -16,8 +16,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
 import org.bukkit.plugin.Plugin;
 
-import java.awt.*;
-
 public class EC implements CommandExecutor {
 
     Plugin plugin = VeryDangerousCaves.getPlugin(VeryDangerousCaves.class);
@@ -25,13 +23,17 @@ public class EC implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length==0) {
-            sender.sendMessage(ChatColor.YELLOW + "VeryDangerousCaves Info");
+            sender.sendMessage(ChatColor.YELLOW + "EnhancedCaves Info");
             sender.sendMessage(ChatColor.YELLOW + "/spawn to spawn an mob");
             sender.sendMessage(ChatColor.YELLOW + "/reload to reload config");
             sender.sendMessage(ChatColor.YELLOW + "Thats it");
             return true;
         } else if(args[0].equalsIgnoreCase("spawn")) {
             Location loc = ((Player) sender).getLocation();
+            if (args[1].isEmpty()) {
+                sender.sendMessage(ChatColor.RED + "The third argument should be a mob name");
+                return true;
+            }
             String mob = args[1];
             if (mob.equalsIgnoreCase("AlphaSpider")) {
                 Zombie z = (Zombie) loc.getWorld().spawnEntity(loc, EntityType.ZOMBIE);
@@ -71,12 +73,12 @@ public class EC implements CommandExecutor {
                 //Mob m = new WaterElemental(z);
             //}
         else {
-                sender.sendMessage(Color.RED + "Invalid mob name");
+                sender.sendMessage(ChatColor.RED + "Invalid mob name");
             }
 
             return true;
         } else if (args[0].equalsIgnoreCase("info") || args[0].length() < 2) {
-            sender.sendMessage(ChatColor.YELLOW + "VeryDangerousCaves Info");
+            sender.sendMessage(ChatColor.YELLOW + "EnhancedCaves Info");
             sender.sendMessage(ChatColor.YELLOW + "/spawn to spawn an mob");
             sender.sendMessage(ChatColor.YELLOW + "/reload to reload config");
             sender.sendMessage(ChatColor.YELLOW + "Thats it");
@@ -85,6 +87,7 @@ public class EC implements CommandExecutor {
             plugin.getPluginLoader().disablePlugin(plugin);
             plugin.getPluginLoader().enablePlugin(plugin);
             System.out.println(ChatColor.GREEN + "Reload complete");
+            return true;
         }
         return false;
     }

@@ -55,7 +55,7 @@ public final class VeryDangerousCaves extends JavaPlugin implements Listener {
             Bukkit.getPluginManager().registerEvents(damageHandler, this);
             Bukkit.getPluginManager().registerEvents(deathHandler, this);
             Bukkit.getPluginManager().registerEvents(new me.mvabo.verydangerouscaves.caveListeners.onBreakBlock(), this);
-            Bukkit.getPluginManager().registerEvents(new SpawnHandler(), this);
+            //Bukkit.getPluginManager().registerEvents(new SpawnHandler(), this);
         }
 
         this.getCommand("EC").setExecutor(new EC());
